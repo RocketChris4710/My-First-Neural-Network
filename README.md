@@ -55,19 +55,19 @@ print('Test accuracy:', score[1])
 ## Note
 1. 一樣的NN每次估計的acc不一樣(隨機性)
 Ex:
-初始化: weight
-正則化: dropout
-層: 詞嵌入
-最優化: stochastic optimizing
+a. 初始化: weight
+b. 正則化: dropout
+c. 層: 詞嵌入
+d. 最優化: stochastic optimizing
 2. 有時候acc 高到92%不要太高興，好的NN經得起多次驗證
 3. sigmoid + relu(適合中間層) + sigmoid 是可行的
 4. 設data=1000 batch_size=200,epochs=10，則會在一個epoch隨機丟入並處理5次資料
 5. Solution for overfitting and underfitting (acc↓):
- 增加資料量
- 在正確的epoch停止 => dropout layer
- Reduce layer
- Change optimizer: sigmoid=>自主改變梯度的Adam(RMSprop + momentum)
- L1/L2 Regularization
+a. 增加資料量
+b. 在正確的epoch停止 => dropout layer
+c. Reduce layer
+d. Change optimizer: sigmoid=>自主改變梯度的Adam(RMSprop + momentum)
+e. L1/L2 Regularization
 6. 一維Gaussian Distribution資料不適合用NN分析處理 => 直接lineral regression
 7. evaluate要跑的是training data
 8. Logistics Regression 最適合用Softmax+Sigmoid
